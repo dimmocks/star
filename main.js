@@ -28,12 +28,11 @@ function init() {
 	context.strokeStyle = color;
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	context.lineWidth = thick;
-	context.beginPath();
- 
 }
  
 function make_lines() {
 	var speed = koef;
+	context.beginPath();
 	for (i = 1; i < 720; i ++ ) {
 		ln = min_max(length, 0)
  	
@@ -46,6 +45,7 @@ function make_lines() {
 		drawLine(lines[i]);
 	}
 	context.stroke();
+	context.closePath();
 }
 
 // function update_speed() {
