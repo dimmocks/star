@@ -3,13 +3,14 @@
 }
 
 #play {
-    border-left: 40px solid #fff; 
+    border-left: 40px solid #666; 
     border-top: 20px solid transparent; 
     border-bottom: 20px solid transparent; 
     float: left; 
     margin-right: 50px; 
     cursor: pointer;
 }
+
 #play.pause {
     border: none; 
     border-left: 14px solid #fff; 
@@ -23,10 +24,10 @@
     width: 520px;
     margin-bottom: 20px;
 }
-.colorpick.active {border: 1px solid #fff; width: 16px; height: 16px; margin: 6px; opacity: 0.5;}
-.colorpick {width: 28px; height:28px; float: left; margin: 1px;cursor: pointer;} 
+
+.colorpick {width: 26px; height:26px; float: left; margin: -1px; cursor: pointer; border: 1px solid #444; color: #444; font-size: 20px; text-align: center; line-height: 21px;} 
 #canvas {margin: 0 auto; display: block;}
-.reload {width: 24px; height: 24px; cursor: pointer; border: 2px solid #fff; float: left; margin: 1px; background: #000;}
+.reload {width: 26px; height: 26px; cursor: pointer; float: left; margin: -1px; background: linear-gradient(180deg, #e32636, #ff8800, #ffbf00, #3caa3c, #3a75c4, #990066); border: 1px solid #444;}
 .colors {float: left; width: 180px; margin-right: 29px;}
 .back-colors {float: left; width: 180px;}
 .params {float: left; margin-top: 17px;}
@@ -34,29 +35,36 @@
 .color-block {float: left;}
 .thickness {float: left; margin-right: 20px;}
 .thickness div:hover {background: #666;}
-.thickness div {background: #fff; margin-bottom: 10px; cursor: pointer; width: 30px; border: 1 solid #666;}
+.thickness div {background: #fff; margin-bottom: 10px; cursor: pointer; width: 30px; border: 1px solid #666;}
 .thickness .thin {height: 1px;}
 .thickness .thick {height: 3px;}
 .thickness .thicker {height: 7px;}
 
 .length {float: left}
 .length div:hover {background: #666;}
-.length div {background: #fff; margin-right: 10px; cursor: pointer; float: left; width: 3px; border: 1 solid #666;}
+.length div {background: #fff; margin-right: 10px; cursor: pointer; float: left; width: 3px; border: 1px solid #666;}
 .length .short {height: 7px;}
 .length .long {height: 16px;}
 .length .longer {height: 34px;}
 
-.slider {width: 510px; height: 6px; background: #fff; position: relative; border-radius: 1px; padding-left: 10px; margin-top: 20px;}
+.slider {width: 510px; height: 4px; background: #fff; position: relative; border-radius: 1px; padding-left: 10px; margin-top: 20px; border: 1px solid #666;}
 .slider a {
-    top: -3px;
+    top: -8px;
     display: block;
     position: absolute;
     text-decoration: none;
     outline: none;
     width: 10px;
     height: 10px;
-    border-radius: 1px;
-    background: #fff;
-    border: 1px solid #666;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    text-shadow: 
+        0px 0px 0px #666, 
+        1px 0px 0px #666, 
+        -1px 0px 0px #666, 
+        0px -1px 0px #666,
+        0px 1px 0px #666;
+    font-size: 17px;
 }
 .ui-slider-horizontal .ui-slider-handle {margin-left: -6px;}

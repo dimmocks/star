@@ -91,8 +91,8 @@ function begin(){
 }
 
 function setColor() {
-    $('.slider, .slider a, .thickness div.active,.length div.active').css('background', color);
-
+    $('.slider, .thickness div.active,.length div.active').css('background', color);
+    $('.slider a').css('color', color)
     if ($('#play').hasClass('pause')) {
         $('#play').css('border-color', color);
     } else {
@@ -156,9 +156,9 @@ $(document).ready(function(){
  
     $("body").on('click', ".colors .colorpick", function(){
         var parentClass = "." + $(this).parent().attr('class');
-        $(parentClass + " .colorpick").removeClass('active');
+        $(parentClass + " .colorpick").text('');
         color = $(this).data('color');
-        $(this).addClass('active');
+        $(this).text('■')
         setColor();
         if (!$('#play').hasClass('pause')) {
             begin();
@@ -167,8 +167,9 @@ $(document).ready(function(){
 
     $("body").on('click', ".back-colors .colorpick", function(){
         var parentClass = "." + $(this).parent().attr('class');
-        $(parentClass + " .colorpick").removeClass('active');
+        $(parentClass + " .colorpick").text('');
         $(this).addClass('active');
+        $(this).text('■')
         $("body").css("background", $(this).data('color'));
     });
  
@@ -197,6 +198,9 @@ $(document).ready(function(){
     });
 
     $( "#slider" ).slider({
+        create: function (event, ui) {
+            $("#slider a").text("S");  
+        },
         step: 0.1,
         max: 10,
         min: -10,
@@ -207,6 +211,9 @@ $(document).ready(function(){
     });
 
     $( "#slider-quantity" ).slider({
+        create: function (event, ui) {
+            $("#slider-quantity a").text("Q");  
+        },
         step: 1,
         max: 1000,
         min: 0,
