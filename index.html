@@ -1,66 +1,43 @@
 <html>
 <head>
-	<title>0110110101100101100101010010101001100100101001010</title>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-	<script type="text/javascript" src="main.js"></script>
-	<style>
-		.clear {clear: both;}
-		#play {border-left:40px solid #fff; border-top:20px solid transparent; border-bottom:20px solid transparent; float: left; margin-right: 50px; cursor: pointer;}
-		#play.pause {border: none; border-left:14px solid #fff; border-right:14px solid #fff; width: 12px; height: 38px;}
-		#stop {width: 20px; height: 20px; float: left; background: #fff; cursor: pointer;}
-		.starter {position: absolute; left: 40%;}
-		.colorpick.active {border: 1px solid #fff; width: 18px; height: 18px; margin: 8px;}
-		.colorpick {width: 30px; height:30px; float: left; margin: 3px;cursor: pointer;} 
-		#canvas_test {margin: 0 auto; display: block;}
-		#reload {width: 24px; height: 24px; cursor: pointer; border: 3px solid #fff; float: left; margin: 3px;}
-		.colors {float: left; width: 200px;}
- 
-		.params {float: left; margin-top: 17px;}
- 
-		.thickness {float: left; margin-right: 20px;}
-		.thickness div:hover {background: #666;}
-		.thickness div {background: #fff; margin-bottom: 10px; cursor: pointer; width: 30px;}
-		.thickness .thin {height: 3px;}
-		.thickness .thick {height: 5px;}
-		.thickness .thicker {height: 8px;}
- 
-		.length {float: left}
-		.length div:hover {background: #666;}
-		.length div {background: #fff; margin-right: 10px; cursor: pointer; float: left; width: 3px;}
-		.length .short {height: 9px;}
-		.length .long {height: 18px;}
-		.length .longer {height: 36px;}
-
-		#slider {width: 400px; height: 6px; background: #fff; position: relative; border-radius: 1px; padding-left: 10px; margin-top: 20px;}
-		#slider a {top: -3px; display: block; position: absolute; text-decoration: none; outline: none; width: 12px; height: 12px; border-radius: 2px; background: #fff}
-		.ui-slider-horizontal .ui-slider-handle {margin-left: -6px;}
-
- 
-	</style>
+    <title>0110110101100101100101010010101001100100101001010</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ui.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="css/style.css">
 </head>
 <body style="background: #000">
-	<div class="starter">
-		<div id="play"></div>
-		<div class="colors">
-			<div id="reload"></div>
-		</div>
-		<div class="params">
-			<div class="thickness">
-				<div class="thin active" data-thick="0.1"></div>
-				<div class="thick" data-thick="1"></div>
-				<div class="thicker" data-thick="10"></div>
-			</div>
-			<div class="length">
-				<div class="short active" data-length="200"></div>
-				<div class="long" data-length="300"></div>
-				<div class="longer" data-length="400"></div>
-			</div>
-		</div>
-		<div class="clear"></div>
-		<div id="slider"></div>
-	</div>
-	<canvas id="canvas_test"></canvas>
+    <div class="starter">
+        <div class="line-make">
+            <div>
+                <div id="play"></div>
+            </div>
+            <div class="params">
+                <div class="thickness">
+                    <div class="thin active" data-thick="0.1"></div>
+                    <div class="thick" data-thick="1"></div>
+                    <div class="thicker" data-thick="10"></div>
+                </div>
+                <div class="length">
+                    <div class="short active" data-length="200"></div>
+                    <div class="long" data-length="300"></div>
+                    <div class="longer" data-length="400"></div>
+                </div>
+            </div>
+        </div>
+        <div class="color-block">
+            <div class="colors">
+                <div class="reload"></div>
+            </div>
+            <div class="back-colors">
+                <div class="reload"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="slider" class="slider"></div>
+        <div id="slider-quantity" class="slider"></div>
+    </div>
+    <canvas id="canvas"></canvas>
 </body>
 </html>

@@ -1,0 +1,62 @@
+.clear {
+    clear: both;
+}
+
+#play {
+    border-left: 40px solid #fff; 
+    border-top: 20px solid transparent; 
+    border-bottom: 20px solid transparent; 
+    float: left; 
+    margin-right: 50px; 
+    cursor: pointer;
+}
+#play.pause {
+    border: none; 
+    border-left: 14px solid #fff; 
+    border-right:14px solid #fff; 
+    width: 12px; 
+    height: 40px;
+}
+
+.starter {
+    margin: 0px auto; 
+    width: 520px;
+    margin-bottom: 20px;
+}
+.colorpick.active {border: 1px solid #fff; width: 16px; height: 16px; margin: 6px; opacity: 0.5;}
+.colorpick {width: 28px; height:28px; float: left; margin: 1px;cursor: pointer;} 
+#canvas {margin: 0 auto; display: block;}
+.reload {width: 24px; height: 24px; cursor: pointer; border: 2px solid #fff; float: left; margin: 1px; background: #000;}
+.colors {float: left; width: 180px; margin-right: 29px;}
+.back-colors {float: left; width: 180px;}
+.params {float: left; margin-top: 17px;}
+.line-make {float: left; margin-right: 34px;}
+.color-block {float: left;}
+.thickness {float: left; margin-right: 20px;}
+.thickness div:hover {background: #666;}
+.thickness div {background: #fff; margin-bottom: 10px; cursor: pointer; width: 30px; border: 1 solid #666;}
+.thickness .thin {height: 1px;}
+.thickness .thick {height: 3px;}
+.thickness .thicker {height: 7px;}
+
+.length {float: left}
+.length div:hover {background: #666;}
+.length div {background: #fff; margin-right: 10px; cursor: pointer; float: left; width: 3px; border: 1 solid #666;}
+.length .short {height: 7px;}
+.length .long {height: 16px;}
+.length .longer {height: 34px;}
+
+.slider {width: 510px; height: 6px; background: #fff; position: relative; border-radius: 1px; padding-left: 10px; margin-top: 20px;}
+.slider a {
+    top: -3px;
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    outline: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    background: #fff;
+    border: 1px solid #666;
+}
+.ui-slider-horizontal .ui-slider-handle {margin-left: -6px;}
