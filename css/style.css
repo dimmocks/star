@@ -25,11 +25,28 @@
     margin-bottom: 20px;
 }
 
-.colorpick {width: 26px; height:26px; float: left; margin: -1px; cursor: pointer; border: 1px solid #444; color: #444; font-size: 20px; text-align: center; line-height: 21px;} 
+.colorpick {
+    width: 25px;
+    height:25px;
+    float: left;
+    margin: -1px;
+    cursor: pointer;
+    border: 1px solid #444;
+    color: #444;
+    font-size: 20px;
+}
+
+.colorpick span {
+    display: block;
+    margin: 0px auto;
+    width: 13px;
+    line-height: 25px;
+}
+
 #canvas {margin: 0 auto; display: block;}
-.reload {width: 26px; height: 26px; cursor: pointer; float: left; margin: -1px; background: linear-gradient(180deg, #e32636, #ff8800, #ffbf00, #3caa3c, #3a75c4, #990066); border: 1px solid #444;}
-.colors {float: left; width: 180px; margin-right: 29px;}
-.back-colors {float: left; width: 180px;}
+.reload {width: 25px; height: 25px; cursor: pointer; float: left; margin: -1px; background: linear-gradient(180deg, #e32636, #ff8800, #ffbf00, #3caa3c, #3a45f4); border: 1px solid #444;}
+.colors {float: left; width: 170px; margin-right: 29px;}
+.back-colors {float: left; width: 170px;}
 .params {float: left; margin-top: 17px;}
 .line-make {float: left; margin-right: 34px;}
 .color-block {float: left;}
@@ -49,7 +66,7 @@
 
 .slider {width: 510px; height: 4px; background: #fff; position: relative; border-radius: 1px; padding-left: 10px; margin-top: 20px; border: 1px solid #666;}
 .slider a {
-    top: -8px;
+    top: -7px;
     display: block;
     position: absolute;
     text-decoration: none;

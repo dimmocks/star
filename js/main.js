@@ -156,9 +156,9 @@ $(document).ready(function(){
  
     $("body").on('click', ".colors .colorpick", function(){
         var parentClass = "." + $(this).parent().attr('class');
-        $(parentClass + " .colorpick").text('');
+        $(parentClass + " .colorpick").html('');
         color = $(this).data('color');
-        $(this).text('■')
+        $(this).html('<span>■</span>');
         setColor();
         if (!$('#play').hasClass('pause')) {
             begin();
@@ -167,9 +167,9 @@ $(document).ready(function(){
 
     $("body").on('click', ".back-colors .colorpick", function(){
         var parentClass = "." + $(this).parent().attr('class');
-        $(parentClass + " .colorpick").text('');
+        $(parentClass + " .colorpick").html('');
         $(this).addClass('active');
-        $(this).text('■')
+        $(this).html('<span>■</span>');
         $("body").css("background", $(this).data('color'));
     });
  
