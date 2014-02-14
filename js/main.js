@@ -92,7 +92,7 @@ function begin(){
 
 function setColor() {
     $('.slider, .thickness div.active,.length div.active').css('background', color);
-    $('.slider a').css('color', color)
+    $('.slider a').css('color', color);
     if ($('#play').hasClass('pause')) {
         $('#play').css('border-color', color);
     } else {
@@ -119,9 +119,11 @@ $(document).ready(function(){
             clearInterval(inter_pause);
             inter = setInterval(function(){rotate();}, anim_speed);
             $(this).addClass('pause');
+            $(".action .border").addClass('pause');
             $('#play').css('border-color', color);
         } else {
             $("#play").removeClass('pause');
+            $(".action .border").removeClass('pause');
             $('#play').css('border-color', 'transparent');
             $('#play').css('border-left-color', color);
             inter_pause = setInterval(function(){
@@ -160,8 +162,9 @@ $(document).ready(function(){
         color = $(this).data('color');
         $(this).html('<span>■</span>');
         setColor();
+
         if (!$('#play').hasClass('pause')) {
-            begin();
+            rotate();
         }
     });
 
@@ -185,7 +188,7 @@ $(document).ready(function(){
         $(this).addClass('active').css('background', color);
         setColor();
         if (!$('#play').hasClass('pause')) {
-            begin();
+            rotate();
         }
     });
  
@@ -199,7 +202,7 @@ $(document).ready(function(){
 
     $( "#slider" ).slider({
         create: function (event, ui) {
-            $("#slider a").text("S");  
+            $("#slider a").text("S");
         },
         step: 0.1,
         max: 10,
@@ -212,7 +215,7 @@ $(document).ready(function(){
 
     $( "#slider-quantity" ).slider({
         create: function (event, ui) {
-            $("#slider-quantity a").text("Q");  
+            $("#slider-quantity a").text("Q");
         },
         step: 1,
         max: 1000,
@@ -220,6 +223,9 @@ $(document).ready(function(){
         value: lineQ,
         slide: function (event, ui) {
             lineQ = ui.value;
+            if (!$('#play').hasClass('pause')) {
+                rotate();
+            }
         }
     });
 });
