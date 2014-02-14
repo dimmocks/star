@@ -59,8 +59,9 @@
 .colorpick span {
     display: block;
     margin: 0px auto;
-    width: 13px;
-    line-height: 25px;
+    width: 14px;
+    line-height: 20px;
+    font-family: Arial;
 }
 
 #canvas {margin: 0 auto; display: block;}
